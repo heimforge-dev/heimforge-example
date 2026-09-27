@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "suite.config.json",
+  "suiteVersion": "0.1.0",
+  "dependencies": {
+    "denikson-BepInExPack_Valheim": "5.4.2351",
+    "ValheimModding-Jotunn": "2.30.2"
+  },
+  "serverModules": [
+    "HeimForgeExample.ServerCore",
+    "HeimForgeExample.Shared.Diagnostics"
+  ],
+  "requiredClientModules": [],
+  "optionalClientModules": [
+    "HeimForgeExample.Shared.Diagnostics"
+  ],
+  "clientOnlyModules": [
+    "HeimForgeExample.Client"
+  ]
+}

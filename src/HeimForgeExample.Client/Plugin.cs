@@ -1,0 +1,37 @@
+using BepInEx;
+using Jotunn.Utils;
+using HeimForgeExample.Common;
+using HeimForgeExample.Common.Diagnostics;
+using HeimForgeExample.Common.Modules;
+
+namespace HeimForgeExample.Client;
+
+[BepInPlugin(PluginGuid, PluginName, PluginVersion)]
+[BepInDependency(Jotunn.Main.ModGuid, BepInDependency.DependencyFlags.HardDependency)]
+[NetworkCompatibility(CompatibilityLevel.NotEnforced, VersionStrictness.None)]
+public sealed class Plugin : BaseUnityPlugin
+{
+    public const string PluginGuid = SuiteConstants.GuidRoot + ".client";
+    public const string PluginName = SuiteConstants.Name + ".Client";
+    public const string PluginVersion = SuiteConstants.Version;
+
+    internal static readonly ModuleDescriptor Descriptor = new(
+        ModuleIds.Client,
+        PluginName,
+        ModuleScope.ClientOnly,
+        PluginVersion);
+
+    internal RuntimeDiagnostics Diagnostics { get; private set; } = null!;
+
+    private void Awake()
+    {
+        var debugLogging = Config.Bind(
+            "Development",
+            "DebugLogging",
+            false,
+            "Enable opt-in runtime debug logging for this module.");
+        Diagnostics = new RuntimeDiagnostics(() => debugLogging.Value, Logger.LogInfo);
+
+        Logger.LogInfo($"{PluginName} {PluginVersion} loaded. No client features are active in the scaffold.");
+    }
+}

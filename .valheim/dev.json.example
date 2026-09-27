@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "developmentOnly": true,
+  "valheimInstall": "/mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim",
+  "clientPluginDir": "/mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/BepInEx/plugins/HeimForgeExample",
+  "server": {
+    "deployment": {
+      "type": "local",
+      "pluginDir": "/home/YOUR_USER/valheim-dev/plugins/HeimForgeExample"
+    },
+    "lifecycle": {
+      "type": "none"
+    }
+  },
+  "solution": "HeimForgeExample.sln",
+  "configuration": "Debug"
+}

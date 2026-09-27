@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "suiteName": "HeimForgeExample",
+  "rootNamespace": "HeimForgeExample",
+  "pluginGuidRoot": "dev.heimforge.example",
+  "author": "HeimForge contributors",
+  "thunderstoreNamespace": "HeimForgeExample",
+  "suiteVersion": "0.1.0",
+  "csharpLanguageVersion": "10",
+  "jotunnVersion": "2.30.2",
+  "bepInExPackVersion": "5.4.2351",
+  "netFrameworkReferenceAssembliesVersion": "1.0.3",
+  "projects": {
+    "HeimForgeExample.Common": {
+      "scope": "common",
+      "targetFramework": "netstandard2.0"
+    },
+    "HeimForgeExample.ServerCore": {
+      "scope": "serverOnly",
+      "targetFramework": "net48"
+    },
+    "HeimForgeExample.Shared.Diagnostics": {
+      "scope": "sharedOptional",
+      "targetFramework": "net48"
+    },
+    "HeimForgeExample.Client": {
+      "scope": "clientOnly",
+      "targetFramework": "net48"
+    }
+  },
+  "packages": {
+    "commonModule": "HeimForgeExample.Common",
+    "serverModules": [
+      "HeimForgeExample.ServerCore",
+      "HeimForgeExample.Shared.Diagnostics"
+    ],
+    "requiredClientModules": [],
+    "optionalClientModules": [
+      "HeimForgeExample.Shared.Diagnostics"
+    ],
+    "clientOnlyModules": [
+      "HeimForgeExample.Client"
+    ]
+  }
+}

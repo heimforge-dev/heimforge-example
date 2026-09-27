@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <!-- GENERATED from suite.config.json by scripts/suite_metadata.py. Do not edit manually. -->
+  <PropertyGroup>
+    <SuiteName>HeimForgeExample</SuiteName>
+    <SuiteRootNamespace>HeimForgeExample</SuiteRootNamespace>
+    <SuitePluginGuidRoot>dev.heimforge.example</SuitePluginGuidRoot>
+    <SuiteAuthors>HeimForge contributors</SuiteAuthors>
+    <SuiteThunderstoreNamespace>HeimForgeExample</SuiteThunderstoreNamespace>
+    <SuiteVersion>0.1.0</SuiteVersion>
+    <SuiteCSharpLanguageVersion>10</SuiteCSharpLanguageVersion>
+    <JotunnVersion>2.30.2</JotunnVersion>
+    <BepInExPackVersion>5.4.2351</BepInExPackVersion>
+    <NetFrameworkReferenceAssembliesVersion>1.0.3</NetFrameworkReferenceAssembliesVersion>
+  </PropertyGroup>
+</Project>
