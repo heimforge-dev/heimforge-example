@@ -176,7 +176,6 @@ and deployment rules, but some behavior still requires the user's actual
 Valheim environment:
 
 - full Jötunn/Valheim plugin compilation
-- OMP extension load against the installed OMP package
 - dedicated-server plugin load
 - actual multiplayer compatibility behavior
 - Shared Diagnostics RPC runtime proof
