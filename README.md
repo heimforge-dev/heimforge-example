@@ -34,8 +34,8 @@ For full local validation after configuring a development Valheim installation:
 ./scripts/bootstrap.sh
 ```
 
-See `docs/development.md` for local Valheim paths, server deployment, SSH,
-Docker lifecycle configuration, and reference maintenance.
+See `docs/development.md` for local setup, server deployment, and
+dependency/reference maintenance.
 
 ## Modules
 
@@ -66,7 +66,7 @@ WSL repository + dotnet
         +-- build/test/package in WSL
         +-- inspect Windows Valheim files through /mnt/c/...
         +-- deploy client DLLs to Windows Valheim through /mnt/c/...
-        +-- deploy server DLLs to the Linux/Docker dedicated server
+        +-- deploy server DLLs to the configured local or remote server
 ```
 
 Windows remains the real Valheim client runtime.
@@ -129,6 +129,14 @@ Deployment is explicit and metadata-driven:
 
 Client receives Common + Client + Shared.Diagnostics.
 Server receives Common + ServerCore + Shared.Diagnostics.
+
+Server deployment is not tied to Docker. Local filesystem destinations and
+remote POSIX or Windows servers over SSH are supported. Docker is an optional
+lifecycle integration for restart, status, and log operations.
+
+Managed hosts that expose only FTP/SFTP or a control-panel file manager require
+manual deployment through the provider's tools because automated remote
+deployment requires an SSH command channel.
 
 Server deployment does not restart the server unless explicitly requested.
 
